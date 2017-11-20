@@ -4,4 +4,6 @@ RUN apt-get update &&\
     apt-get -y install wget xserver-xorg-video-dummy &&\
     rm -rf /var/lib/apt/lists/*
 
-RUN wget http://xpra.org/xorg.conf -O /root/xorg.conf
+WORKDIR ~
+
+RUN wget http://xpra.org/xorg.conf
